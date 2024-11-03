@@ -12,8 +12,8 @@ async function render() {
   //console.log("load");
   const productsData =await fechData();
   //console.log(productsData);
-  const productsInstance=new products(productsNode,productsData);
   const CartInstance=new Cart(cartListNode,totalPreisNode);
+  const productsInstance=new products(productsNode,productsData,CartInstance);
   // console.log(CartInstance);
   // console.log(productsInstance)
   productsInstance.showproducts();

@@ -1,22 +1,22 @@
-import Cart from "./models/cart.js";
-import products from "./models/products.js";
 import { fechData } from "./utils/httpReq.js";
+import products from "./models/products.js";
+import Cart from "./models/cart.js";
 
-
-
-const productsNode=document.getElementById("products");
-const cartListNode=document.getElementById("cart-list");
-const totalPreisNode=document.getElementById("total-price").querySelector("span");
+const productsNode = document.getElementById("products");
+const cartListNode = document.getElementById("cart-list");
+const totalPriceNode = document
+  .getElementById("total-price")
+  .querySelector("span");
 
 async function render() {
   //console.log("load");
-  const productsData =await fechData();
+  const productsData = await fechData();
   //console.log(productsData);
-  const CartInstance=new Cart(cartListNode,totalPreisNode);
-  const productsInstance=new products(productsNode,productsData,CartInstance);
-  // console.log(CartInstance);
-  // console.log(productsInstance)
-  productsInstance.showproducts();
+  const cartInstance = new Cart(cartListNode, totalPriceNode);
+  const productInstance = new products(productsNode, productsData,cartInstance);
+  console.log(cartInstance);
+  // console.log(productInstance);
+  productInstance.showProducts();
 }
 
 document.addEventListener("DOMContentLoaded", render);

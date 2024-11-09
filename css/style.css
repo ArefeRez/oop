@@ -16,22 +16,22 @@ body {
   max-width: 1400px;
   margin: auto;
 }
-header{
+header {
   color: var(--color-primary);
   padding: 30px 0;
 }
-main{
+main {
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
 }
-#products{
+#products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-right: 40px;
+  margin-right: 40px; /*vaghti un section sabade kharid umad azash y fasele begire */
 }
-#products > div{
+#products > div {
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -41,11 +41,11 @@ main{
   padding: 10px;
   margin-bottom: 40px;
 }
-#product img{
+#products img {
   width: 300px;
   border-radius: 25px;
 }
-#product-info{
+#product-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,21 +56,23 @@ main{
   padding: 25px;
   margin-top: 30px;
 }
-#product-info h3{
+
+#product-info h3 {
   color: var(--color-primary);
   font-size: 1.3rem;
 }
-#product-info div{
+
+#product-info div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#productinfo span{
+#productinfo span {
   font-size: 1.1rem;
   color: gray;
 }
-#product-info button{
+#product-info button {
   background-color: #fff;
   border: none;
   width: 40px;
@@ -83,12 +85,12 @@ main{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 20px;
   transition: all 0.2s ease-in;
 }
-#product-info button:hover{
+#product-info button:hover {
   background-color: var(--color-primary);
   color: #fff;
   border-radius: 40%;
 }
-#cart h3{
+#cart h3 {
   background-color: var(--color-primary);
   color: #fff;
   padding: 20px;
@@ -97,10 +99,11 @@ main{
   border-radius: 25px;
   margin-bottom: 30px;
 }
-#cart-list{
+#cart-list {
   width: 330px;
 }
- #cart-list h5{
+
+#cart-list h5 {
   color: var(--color-error);
   border: 2px solid var(--color-error);
   padding: 40px 0;
@@ -108,13 +111,78 @@ main{
   border-radius: 25px;
   font-size: 1.3rem;
   margin-bottom: 30px;
- }
- #total-price{
+}
+#cart-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--color-light);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+#cart-list img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+#cart-info {
+  text-align: center;
+}
+#cart-info h4 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+#cart-info p {
+  color: gray;
+}
+#cart-control div {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#cart-control div button {
+  background-color: var(--color-secondary);
+  border: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+#cart-control div button:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 40%;
+}
+#cart-control > button {
+  background-color: #fff;
+  border: 1px solid var(--color-error);
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--color-error);
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+
+#cart-control > button:hover {
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+#total-price {
   border: 2px solid var(--color-secondary);
   padding: 20px;
   border-radius: 20px;
   color: gray;
- }
- #total-price span{
-  color: var(--color-primary );
- }
+}
+#total-price span {
+  color: var(--color-primary);
+}
